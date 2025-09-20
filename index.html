@@ -335,9 +335,10 @@
 
         /*---------- Conteúdo da página (mantido original) ----------*/
 
-        /* Hero */
+        /* Hero - CORRIGIDO: Removida a cor de fundo com gradiente azul claro */
         .hero {
-            background: linear-gradient(180deg, rgba(38, 147, 171, 0.06), rgba(224, 242, 247, 0.4));
+            /* background: linear-gradient(180deg, rgba(38, 147, 171, 0.06), rgba(224, 242, 247, 0.4)); */
+            background: #fff; /* Fundo branco */
             padding: 56px 20px;
             text-align: center;
             color: var(--dark-blue);
@@ -552,12 +553,14 @@
             font-style: italic;
         }
 
-        /* FAQ */
+        /* FAQ - CORRIGIDO: Alterado o background do item de faq de azul claro para branco */
         .faq-item {
-            background: var(--light-blue);
+            /* background: var(--light-blue); */
+            background: #fff; /* Fundo branco */
             border-radius: 8px;
             padding: 18px;
             margin-bottom: 12px;
+            border: 1px solid #eee; /* Adicionado borda suave para separar */
         }
 
         .faq-item h3 {
@@ -739,24 +742,22 @@
                     alt="AP Informação Logo">
             </a>
         </div>
-        <!-- SUBSTITUÍDO o <button class="menu-toggle"> por input e label -->
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <!-- FIM DA SUBSTITUIÇÃO -->
         <nav class="header-nav">
             <ul>
                 <li>
                     <span>Serviços</span>
                     <ul class="dropdown-menu">
-                        <li><a href="https://sacapinformacao.github.io/BackGroundCheck/">Background Check</a></li>
-                        <li><a href="https://sacapinformacao.github.io/Veiculos/">Análise de Veículos</a></li>
-                        <li><a href="https://sacapinformacao.github.io/Enriquecimento/">Enriquecimento de Dados</a></li>
-                        <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
                         <li><a href="https://sacapinformacao.github.io/Cadastral/">Validação Cadastral</a></li>
+                        <li><a href="https://sacapinformacao.github.io/Enriquecimento/">Enriquecimento de Dados</a></li>
                         <li><a href="https://sacapinformacao.github.io/Credito/">Análise de Crédito</a></li>
+                        <li><a href="https://sacapinformacao.github.io/BackGroundCheck/">Background Check</a></li>
                         <li><a href="https://sacapinformacao.github.io/checagem-pre-processual/">Checagem Pré-processual</a></li>
                         <li><a href="https://sacapinformacao.github.io/devedores-e-reus/">Localização de Devedores e Réus</a></li>
-                    </ul>
+                        <li><a href="https://sacapinformacao.github.io/Veiculos/">Análise de Veículos</a></li>
+                        <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
+                        </ul>
                 </li>
                 <li>
                     <span>Setores</span>
@@ -950,22 +951,26 @@
         </section>
 
         <section class="section container">
-            <h2>Perguntas Frequentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <h3>Como funciona o saldo da mensalidade?</h3>
-                    <p>O valor pago no plano mensal é integralmente revertido em saldo que você pode usar para realizar qualquer tipo de consulta em nossa plataforma. Ao final de cada mês, o saldo é zerado e renovado com o novo pagamento.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Posso contratar serviços avulsos?</h3>
-                    <p>Não. Trabalhamos exclusivamente com a modalidade de planos mensais. Dessa forma, garantimos preços unitários mais competitivos, suporte especializado e acesso a todas as nossas funcionalidades de forma contínua.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>O que acontece se eu usar todo o saldo antes do fim do mês?</h3>
-                    <p>Caso o seu consumo de consultas ultrapasse o valor do saldo do plano no mês, o acesso ao sistema não será bloqueado. As consultas excedentes serão calculadas com base nos preços unitários do seu plano e cobradas junto à mensalidade do mês seguinte.</p>
-                </div>
-            </div>
-        </section>
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <h3>Quem pode contratar os serviços do APinformação?</h3>
+            <p>A contratação do sistema APinformação é permitida para <strong>empresas com CNPJ ativo</strong> na receita federal ou <strong>Advogados com numero de OAB ativo</strong>.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Como funciona o saldo da mensalidade?</h3>
+            <p>O valor pago no plano mensal é integralmente revertido em saldo que você pode usar para realizar qualquer tipo de consulta em nossa plataforma. Ao final de cada mês, o saldo é zerado e renovado com o novo pagamento.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Posso contratar serviços avulsos?</h3>
+            <p>Não. Trabalhamos exclusivamente com a modalidade de planos mensais. Dessa forma, garantimos preços unitários mais competitivos, suporte especializado e acesso a todas as nossas funcionalidades de forma contínua.</p>
+        </div>
+        <div class="faq-item">
+            <h3>O que acontece se eu usar todo o saldo antes do fim do mês?</h3>
+            <p>Caso o seu consumo de consultas ultrapasse o valor do saldo do plano no mês, o acesso ao sistema não será bloqueado. As consultas excedentes serão calculadas com base nos preços unitários do seu plano e cobradas junto à mensalidade do mês seguinte.</p>
+        </div>
+    </div>
+</section>
 
         <script>
             const faqItems = document.querySelectorAll('.faq-item h3');
@@ -1021,15 +1026,15 @@
             <div class="footer-column">
                 <h3>Serviços</h3>
                 <ul>
-                    <li><a href="https://sacapinformacao.github.io/BackGroundCheck/">Background Check</a></li>
-                    <li><a href="https://sacapinformacao.github.io/Veiculos/">Análise de Veículos</a></li>
-                    <li><a href="https://sacapinformacao.github.io/Enriquecimento/">Enriquecimento de Dados</a></li>
-                    <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
                     <li><a href="https://sacapinformacao.github.io/Cadastral/">Validação Cadastral</a></li>
+                    <li><a href="https://sacapinformacao.github.io/Enriquecimento/">Enriquecimento de Dados</a></li>
                     <li><a href="https://sacapinformacao.github.io/Credito/">Análise de Crédito</a></li>
+                    <li><a href="https://sacapinformacao.github.io/BackGroundCheck/">Background Check</a></li>
                     <li><a href="https://sacapinformacao.github.io/checagem-pre-processual/">Checagem Pré-processual</a></li>
                     <li><a href="https://sacapinformacao.github.io/devedores-e-reus/">Localização de Devedores e Réus</a></li>
-                </ul>
+                    <li><a href="https://sacapinformacao.github.io/Veiculos/">Análise de Veículos</a></li>
+                    <li><a href="https://sacapinformacao.github.io/Compliance/">Compliance e LGPD</a></li>
+                    </ul>
             </div>
             <div class="footer-column">
                 <h3>Setores</h3>
